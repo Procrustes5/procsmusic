@@ -1,0 +1,14 @@
+{
+  "resourceName": "procsmusic",
+  "policyUUID": "d822611e",
+  "bucketName": "procsmusic997af5fd4477413aa19196c9a0fd20e5",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "S3Triggere9de5c3f",
+  "groupAccess": {}
+}
