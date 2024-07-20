@@ -8,48 +8,60 @@ type GeneratedSubscription<InputType, OutputType> = string & {
   __generatedSubscriptionOutput: OutputType
 }
 
-export const onCreateTodo =
-  /* GraphQL */ `subscription OnCreateTodo($filter: ModelSubscriptionTodoFilterInput) {
-  onCreateTodo(filter: $filter) {
+export const onCreateAudioFile =
+  /* GraphQL */ `subscription OnCreateAudioFile($filter: ModelSubscriptionAudioFileFilterInput) {
+  onCreateAudioFile(filter: $filter) {
     id
-    name
-    description
+    filename
+    duration
+    uploadedBy
     createdAt
     updatedAt
+    _version
+    _deleted
+    _lastChangedAt
     __typename
   }
 }
 ` as GeneratedSubscription<
-    APITypes.OnCreateTodoSubscriptionVariables,
-    APITypes.OnCreateTodoSubscription
+    APITypes.OnCreateAudioFileSubscriptionVariables,
+    APITypes.OnCreateAudioFileSubscription
   >
-export const onUpdateTodo =
-  /* GraphQL */ `subscription OnUpdateTodo($filter: ModelSubscriptionTodoFilterInput) {
-  onUpdateTodo(filter: $filter) {
+export const onUpdateAudioFile =
+  /* GraphQL */ `subscription OnUpdateAudioFile($filter: ModelSubscriptionAudioFileFilterInput) {
+  onUpdateAudioFile(filter: $filter) {
     id
-    name
-    description
+    filename
+    duration
+    uploadedBy
     createdAt
     updatedAt
+    _version
+    _deleted
+    _lastChangedAt
     __typename
   }
 }
 ` as GeneratedSubscription<
-    APITypes.OnUpdateTodoSubscriptionVariables,
-    APITypes.OnUpdateTodoSubscription
+    APITypes.OnUpdateAudioFileSubscriptionVariables,
+    APITypes.OnUpdateAudioFileSubscription
   >
-export const onDeleteTodo =
-  /* GraphQL */ `subscription OnDeleteTodo($filter: ModelSubscriptionTodoFilterInput) {
-  onDeleteTodo(filter: $filter) {
+export const onDeleteAudioFile =
+  /* GraphQL */ `subscription OnDeleteAudioFile($filter: ModelSubscriptionAudioFileFilterInput) {
+  onDeleteAudioFile(filter: $filter) {
     id
-    name
-    description
+    filename
+    duration
+    uploadedBy
     createdAt
     updatedAt
+    _version
+    _deleted
+    _lastChangedAt
     __typename
   }
 }
 ` as GeneratedSubscription<
-    APITypes.OnDeleteTodoSubscriptionVariables,
-    APITypes.OnDeleteTodoSubscription
+    APITypes.OnDeleteAudioFileSubscriptionVariables,
+    APITypes.OnDeleteAudioFileSubscription
   >

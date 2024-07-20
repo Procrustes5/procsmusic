@@ -8,33 +8,72 @@ type GeneratedQuery<InputType, OutputType> = string & {
   __generatedQueryOutput: OutputType
 }
 
-export const getTodo = /* GraphQL */ `query GetTodo($id: ID!) {
-  getTodo(id: $id) {
+export const getAudioFile = /* GraphQL */ `query GetAudioFile($id: ID!) {
+  getAudioFile(id: $id) {
     id
-    name
-    description
+    filename
+    duration
+    uploadedBy
     createdAt
     updatedAt
+    _version
+    _deleted
+    _lastChangedAt
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetTodoQueryVariables, APITypes.GetTodoQuery>
-export const listTodos = /* GraphQL */ `query ListTodos(
-  $filter: ModelTodoFilterInput
+` as GeneratedQuery<APITypes.GetAudioFileQueryVariables, APITypes.GetAudioFileQuery>
+export const listAudioFiles = /* GraphQL */ `query ListAudioFiles(
+  $filter: ModelAudioFileFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listAudioFiles(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
-      name
-      description
+      filename
+      duration
+      uploadedBy
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
       __typename
     }
     nextToken
+    startedAt
     __typename
   }
 }
-` as GeneratedQuery<APITypes.ListTodosQueryVariables, APITypes.ListTodosQuery>
+` as GeneratedQuery<APITypes.ListAudioFilesQueryVariables, APITypes.ListAudioFilesQuery>
+export const syncAudioFiles = /* GraphQL */ `query SyncAudioFiles(
+  $filter: ModelAudioFileFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncAudioFiles(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      filename
+      duration
+      uploadedBy
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.SyncAudioFilesQueryVariables, APITypes.SyncAudioFilesQuery>

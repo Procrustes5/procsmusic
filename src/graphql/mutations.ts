@@ -8,45 +8,57 @@ type GeneratedMutation<InputType, OutputType> = string & {
   __generatedMutationOutput: OutputType
 }
 
-export const createTodo = /* GraphQL */ `mutation CreateTodo(
-  $input: CreateTodoInput!
-  $condition: ModelTodoConditionInput
+export const createAudioFile = /* GraphQL */ `mutation CreateAudioFile(
+  $input: CreateAudioFileInput!
+  $condition: ModelAudioFileConditionInput
 ) {
-  createTodo(input: $input, condition: $condition) {
+  createAudioFile(input: $input, condition: $condition) {
     id
-    name
-    description
+    filename
+    duration
+    uploadedBy
     createdAt
     updatedAt
+    _version
+    _deleted
+    _lastChangedAt
     __typename
   }
 }
-` as GeneratedMutation<APITypes.CreateTodoMutationVariables, APITypes.CreateTodoMutation>
-export const updateTodo = /* GraphQL */ `mutation UpdateTodo(
-  $input: UpdateTodoInput!
-  $condition: ModelTodoConditionInput
+` as GeneratedMutation<APITypes.CreateAudioFileMutationVariables, APITypes.CreateAudioFileMutation>
+export const updateAudioFile = /* GraphQL */ `mutation UpdateAudioFile(
+  $input: UpdateAudioFileInput!
+  $condition: ModelAudioFileConditionInput
 ) {
-  updateTodo(input: $input, condition: $condition) {
+  updateAudioFile(input: $input, condition: $condition) {
     id
-    name
-    description
+    filename
+    duration
+    uploadedBy
     createdAt
     updatedAt
+    _version
+    _deleted
+    _lastChangedAt
     __typename
   }
 }
-` as GeneratedMutation<APITypes.UpdateTodoMutationVariables, APITypes.UpdateTodoMutation>
-export const deleteTodo = /* GraphQL */ `mutation DeleteTodo(
-  $input: DeleteTodoInput!
-  $condition: ModelTodoConditionInput
+` as GeneratedMutation<APITypes.UpdateAudioFileMutationVariables, APITypes.UpdateAudioFileMutation>
+export const deleteAudioFile = /* GraphQL */ `mutation DeleteAudioFile(
+  $input: DeleteAudioFileInput!
+  $condition: ModelAudioFileConditionInput
 ) {
-  deleteTodo(input: $input, condition: $condition) {
+  deleteAudioFile(input: $input, condition: $condition) {
     id
-    name
-    description
+    filename
+    duration
+    uploadedBy
     createdAt
     updatedAt
+    _version
+    _deleted
+    _lastChangedAt
     __typename
   }
 }
-` as GeneratedMutation<APITypes.DeleteTodoMutationVariables, APITypes.DeleteTodoMutation>
+` as GeneratedMutation<APITypes.DeleteAudioFileMutationVariables, APITypes.DeleteAudioFileMutation>
