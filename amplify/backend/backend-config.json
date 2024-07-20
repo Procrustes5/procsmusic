@@ -59,6 +59,40 @@
       "type": "cicd"
     }
   },
+  "parameters": {
+    "AMPLIFY_function_S3Triggere9de5c3f_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggere9de5c3f"
+        }
+      ]
+    },
+    "AMPLIFY_function_S3Triggere9de5c3f_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggere9de5c3f"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_appId": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_type": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    }
+  },
   "storage": {
     "procsmusic": {
       "dependsOn": [

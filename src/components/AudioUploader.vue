@@ -9,7 +9,7 @@
 import { ref } from 'vue'
 import { uploadData } from 'aws-amplify/storage'
 import { generateClient } from 'aws-amplify/api'
-import { createAudioFile } from './graphql/mutations'
+import { createAudioFile } from '../graphql/mutations'
 
 const client = generateClient()
 const selectedFile = ref<File | null>(null)

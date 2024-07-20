@@ -31,7 +31,7 @@ onMounted(async () => {
   } catch (error) {
     console.error('Not authenticated:', error)
   }
-  
+
   if (audioPlayer.value) {
     audioPlayerElement.value = audioPlayer.value.$refs.audioPlayer as HTMLAudioElement
   }

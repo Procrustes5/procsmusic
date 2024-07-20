@@ -16,7 +16,7 @@
 import { ref, onMounted } from 'vue'
 import { getUrl } from 'aws-amplify/storage'
 import { generateClient } from 'aws-amplify/api'
-import { listAudioFiles } from './graphql/queries'
+import { listAudioFiles } from '../graphql/queries'
 
 const client = generateClient()
 const audioFiles = ref<any[]>([])
