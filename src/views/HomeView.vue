@@ -1,12 +1,10 @@
 <template>
   <div class="home">
     <h1>Web Audio Keyboard</h1>
-    <template>
-      <AudioKeyboard />
-      <AudioUploader />
-      <AudioPlayer ref="audioPlayer" />
-      <AudioVisualizer :audioElement="audioPlayerElement" v-if="audioPlayerElement" />
-    </template>
+    <AudioKeyboard />
+    <AudioUploader />
+    <AudioPlayer ref="audioPlayer" />
+    <AudioVisualizer :audioElement="audioPlayerElement" v-if="audioPlayerElement" />
   </div>
 </template>
 
