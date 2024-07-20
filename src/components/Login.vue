@@ -18,7 +18,7 @@ const signIn = async () => {
   try {
     const result = await signIn({
       username: username.value,
-      password: password.value,
+      password: password.value
     })
     console.log('Sign in successful:', result)
     // 로그인 성공 후 처리 로직

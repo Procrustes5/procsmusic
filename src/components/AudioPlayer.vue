@@ -4,7 +4,10 @@
     <ul>
       <li v-for="file in audioFiles" :key="file.id">
         {{ file.filename }}
-        <span>(Uploaded by: {{ file.uploadedBy }}, Date: {{ new Date(file.createdAt).toLocaleDateString() }})</span>
+        <span
+          >(Uploaded by: {{ file.uploadedBy }}, Date:
+          {{ new Date(file.createdAt).toLocaleDateString() }})</span
+        >
         <button @click="playAudio(file.filename)">Play</button>
       </li>
     </ul>

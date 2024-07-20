@@ -4,9 +4,9 @@ import App from './App.vue'
 import router from './router'
 
 import { Amplify } from 'aws-amplify'
-import awsconfig from './aws-exports'
+import awsmobile from './aws-exports'
 
-Amplify.configure(awsconfig)
+Amplify.configure(awsmobile)
 
 const app = createApp(App)
 
