@@ -8,7 +8,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { uploadData } from 'aws-amplify/storage'
+import { generateClient } from 'aws-amplify/api'
+import { createAudioFile } from './graphql/mutations'
 
+const client = generateClient()
 const selectedFile = ref<File | null>(null)
 
 const handleFileUpload = (event: Event) => {
@@ -30,9 +33,23 @@ const uploadFile = async () => {
       }
     }).result
     console.log('Upload successful:', result)
+
+    // Save metadata
+    await client.graphql({
+      query: createAudioFile,
+      variables: {
+        input: {
+          filename: selectedFile.value.name,
+          uploadedBy: 'currentUser', // Replace with actual user info
+          createdAt: new Date().toISOString()
+        }
+      }
+    })
+
+    console.log('Metadata saved successfully')
     // 여기에 업로드 성공 후 처리 로직 추가
   } catch (error) {
-    console.error('Upload failed:', error)
+    console.error('Upload or metadata saving failed:', error)
     // 여기에 에러 처리 로직 추가
   }
 }

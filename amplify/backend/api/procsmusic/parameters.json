@@ -1,5 +1,6 @@
 {
   "AppSyncApiName": "procsmusic",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2024-07-20T11:10:24.322Z"
 }

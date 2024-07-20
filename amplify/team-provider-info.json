@@ -26,6 +26,12 @@
       },
       "api": {
         "procsmusic": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1yunt0d2k8org",
+          "type": "cicd"
+        }
       }
     }
   }
