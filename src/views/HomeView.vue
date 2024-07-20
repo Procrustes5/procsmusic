@@ -1,8 +1,7 @@
 <template>
   <div class="home">
     <h1>Web Audio Keyboard</h1>
-    <Login v-if="!isAuthenticated" />
-    <template v-else>
+    <template>
       <AudioKeyboard />
       <AudioUploader />
       <AudioPlayer ref="audioPlayer" />
