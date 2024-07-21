@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-procsmusic-dev-e9160-unauthRole",
       "StackName": "amplify-procsmusic-dev-e9160",
       "StackId": "arn:aws:cloudformation:ap-northeast-1:590183741714:stack/amplify-procsmusic-dev-e9160/fd58c200-4682-11ef-9a80-06b554c06075",
-      "AmplifyAppId": "d1yunt0d2k8org"
+      "AmplifyAppId": "d1yunt0d2k8org",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-procsmusic-dev-e9160-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
@@ -19,6 +20,13 @@
         "S3Triggere9de5c3f": {
           "deploymentBucketName": "amplify-procsmusic-dev-e9160-deployment",
           "s3Key": "amplify-builds/S3Triggere9de5c3f-6a5445763265416a4473-build.zip"
+        },
+        "procsmusicfdfd2bccCustomMessage": {
+          "REDIRECTURL": "https://main.d1yunt0d2k8org.amplifyapp.com/",
+          "EMAILSUBJECT": "",
+          "EMAILMESSAGE": "",
+          "deploymentBucketName": "amplify-procsmusic-dev-e9160-deployment",
+          "s3Key": "amplify-builds/procsmusicfdfd2bccCustomMessage-7a70372f455057544474-build.zip"
         }
       },
       "storage": {

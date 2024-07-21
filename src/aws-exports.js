@@ -7,12 +7,12 @@ const awsmobile = {
     "aws_appsync_region": "ap-northeast-1",
     "aws_appsync_authenticationType": "API_KEY",
     "aws_appsync_apiKey": "da2-rrllp7d4inhabb2yx2h6zlqlnm",
-    "aws_cognito_identity_pool_id": "ap-northeast-1:9f7441ed-5bc0-401c-8f37-a563b33d87d6",
+    "aws_cognito_identity_pool_id": "ap-northeast-1:0a47c591-3b26-4865-bac9-c06be3c8f100",
     "aws_cognito_region": "ap-northeast-1",
     "aws_user_pools_id": "ap-northeast-1_NxshHbZvR",
     "aws_user_pools_web_client_id": "7840oe6rg2mvour45i6fk7p1ai",
     "oauth": {
-        "domain": "procsmusic965c6332-965c6332-dev.auth.ap-northeast-1.amazoncognito.com",
+        "domain": "procsmusicc29e21dc-c29e21dc-dev.auth.ap-northeast-1.amazoncognito.com",
         "scope": [
             "phone",
             "email",
@@ -30,9 +30,9 @@ const awsmobile = {
     "aws_cognito_signup_attributes": [
         "EMAIL"
     ],
-    "aws_cognito_mfa_configuration": "OFF",
+    "aws_cognito_mfa_configuration": "OPTIONAL",
     "aws_cognito_mfa_types": [
-        "SMS"
+        "TOTP"
     ],
     "aws_cognito_password_protection_settings": {
         "passwordPolicyMinLength": 8,

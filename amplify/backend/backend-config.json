@@ -22,7 +22,17 @@
   "auth": {
     "procsmusicfdfd2bcc": {
       "customAuth": false,
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "procsmusicfdfd2bccCustomMessage",
+          "triggerProvider": "Cognito"
+        }
+      ],
       "frontendAuthConfig": {
         "mfaConfiguration": "OPTIONAL",
         "mfaTypes": [
@@ -35,9 +45,7 @@
         "signupAttributes": [
           "EMAIL"
         ],
-        "socialProviders": [
-          "GOOGLE"
-        ],
+        "socialProviders": [],
         "usernameAttributes": [],
         "verificationMechanisms": [
           "EMAIL"
@@ -49,6 +57,11 @@
   },
   "function": {
     "S3Triggere9de5c3f": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "procsmusicfdfd2bccCustomMessage": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -75,6 +88,46 @@
         {
           "category": "function",
           "resourceName": "S3Triggere9de5c3f"
+        }
+      ]
+    },
+    "AMPLIFY_function_procsmusicfdfd2bccCustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "procsmusicfdfd2bccCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_procsmusicfdfd2bccCustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "procsmusicfdfd2bccCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_procsmusicfdfd2bccCustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "procsmusicfdfd2bccCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_procsmusicfdfd2bccCustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "procsmusicfdfd2bccCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_procsmusicfdfd2bccCustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "procsmusicfdfd2bccCustomMessage"
         }
       ]
     },

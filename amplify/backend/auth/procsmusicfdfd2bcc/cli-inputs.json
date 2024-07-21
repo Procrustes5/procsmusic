@@ -1,6 +1,8 @@
 {
   "version": "1",
   "cognitoConfig": {
+    "identityPoolName": "procsmusicfdfd2bcc_identitypool_b06a2d65",
+    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "procsmfdfd2bcc",
     "userPoolName": "procsmusicfdfd2bcc_userpool_fdfd2bcc",
     "autoVerifiedAttributes": [
@@ -29,7 +31,7 @@
     "userpoolClientSetAttributes": false,
     "sharedId": "fdfd2bcc",
     "resourceName": "procsmusicfdfd2bcc",
-    "authSelections": "userPoolOnly",
+    "authSelections": "identityPoolAndUserPool",
     "useDefault": "manual",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
@@ -48,21 +50,33 @@
       ]
     },
     "breakCircularDependency": true,
-    "dependsOn": [],
-    "hostedUI": true,
+    "dependsOn": [
+      {
+        "category": "function",
+        "resourceName": "procsmusicfdfd2bccCustomMessage",
+        "triggerProvider": "Cognito",
+        "attributes": [
+          "Arn",
+          "Name"
+        ]
+      }
+    ],
+    "hostedUI": false,
     "userPoolGroups": false,
     "adminQueries": false,
-    "triggers": {},
-    "hostedUIDomainName": "procsmusicc29e21dc-c29e21dc",
-    "authProvidersUserPool": [
-      "Google"
-    ],
-    "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d1yunt0d2k8org.amplifyapp.com/\"],\"LogoutURLs\":[\"https://main.d1yunt0d2k8org.amplifyapp.com/\"]}",
-    "authProviders": [],
+    "triggers": {
+      "CustomMessage": [
+        "verification-link"
+      ]
+    },
     "parentStack": {
       "Ref": "AWS::StackId"
     },
-    "permissions": []
+    "permissions": [],
+    "verificationBucketName": "procsmusicfdfd2bccverificationbucket",
+    "authProviders": [],
+    "authTriggerConnections": [
+      "{\"triggerType\":\"CustomMessage\",\"lambdaFunctionName\":\"procsmusicfdfd2bccCustomMessage\"}"
+    ]
   }
 }
