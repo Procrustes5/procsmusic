@@ -1,16 +1,14 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "procsmusicfdfd2bcc_identitypool_fdfd2bcc",
-    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "procsmfdfd2bcc",
     "userPoolName": "procsmusicfdfd2bcc_userpool_fdfd2bcc",
     "autoVerifiedAttributes": [
       "email"
     ],
-    "mfaConfiguration": "OFF",
+    "mfaConfiguration": "OPTIONAL",
     "mfaTypes": [
-      "SMS Text Message"
+      "TOTP"
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
@@ -25,18 +23,14 @@
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
-    "userpoolClientWriteAttributes": [
-      "email"
-    ],
-    "userpoolClientReadAttributes": [
-      "email"
-    ],
+    "userpoolClientWriteAttributes": [],
+    "userpoolClientReadAttributes": [],
     "userpoolClientLambdaRole": "procsmfdfd2bcc_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
     "sharedId": "fdfd2bcc",
     "resourceName": "procsmusicfdfd2bcc",
-    "authSelections": "identityPoolAndUserPool",
-    "useDefault": "defaultSocial",
+    "authSelections": "userPoolOnly",
+    "useDefault": "manual",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
@@ -56,10 +50,19 @@
     "breakCircularDependency": true,
     "dependsOn": [],
     "hostedUI": true,
-    "hostedUIDomainName": "procsmusic965c6332-965c6332",
-    "authProvidersUserPool": [],
-    "hostedUIProviderMeta": "[]",
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": {},
+    "hostedUIDomainName": "procsmusicc29e21dc-c29e21dc",
+    "authProvidersUserPool": [
+      "Google"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
     "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d1yunt0d2k8org.amplifyapp.com/\"],\"LogoutURLs\":[\"https://main.d1yunt0d2k8org.amplifyapp.com/\"]}",
-    "authProviders": []
+    "authProviders": [],
+    "parentStack": {
+      "Ref": "AWS::StackId"
+    },
+    "permissions": []
   }
 }
