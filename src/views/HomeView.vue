@@ -1,10 +1,13 @@
 <template>
   <div class="home">
     <h1>Web Audio Keyboard</h1>
-    <AudioKeyboard />
-    <AudioUploader />
-    <AudioPlayer ref="audioPlayer" />
-    <AudioVisualizer :audioElement="audioPlayerElement" v-if="audioPlayerElement" />
+    <Login v-if="!isAuthenticated" />
+    <template v-else>
+      <AudioKeyboard />
+      <AudioUploader />
+      <AudioPlayer ref="audioPlayer" />
+      <AudioVisualizer :audioElement="audioPlayerElement" v-if="audioPlayerElement" />
+    </template>
   </div>
 </template>
 
